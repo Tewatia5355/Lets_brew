@@ -22,11 +22,10 @@ public:
             return false;
         for (; i >= 2; i--) // set last element as pivot
         {
-            int xx = 0, y = i - 1; // 2 poointer in between start and pivot
+            int xx = 0, y = i - 1; // 2 pointer in between start and pivot
             while (xx < y)
             {
                 int sum = arr[i] + arr[xx] + arr[y];
-                // cout<<arr[i]<<" "<<arr[xx]<<" "<<arr[y]<<" "<<sum<<" "<<x<<"\n";
                 if (sum < x)
                     xx++;
                 else if (sum > x)

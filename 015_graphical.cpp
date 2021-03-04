@@ -1,6 +1,6 @@
 void nextPermutation(vector<int> &nums)
 {
-    int x = 0, flag = 0;
+    int x = 0, flag = 0; //x is index of last element on left side of the peak
     if (nums.size() <= 1)
         return;
     for (int i = nums.size() - 1; i > 0; --i) // find a point whereyour last peak in array is
@@ -38,7 +38,7 @@ void nextPermutation(vector<int> &nums)
             }
             --i;
         }
-        swap(nums[i], nums[x]); // swap that greater number to x
+        swap(nums[i], nums[x]); // swap that greater number to x or the largest no on right side we have
         i = x + 1;
         int j = nums.size() - 1;
         while (i <= j) // as the elements from peak to right are all descending one! swap them to make them fully increasing!!
